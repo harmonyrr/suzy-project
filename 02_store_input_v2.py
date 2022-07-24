@@ -71,7 +71,7 @@ class JobEnter:
         self.virus_protection_entry.grid(row=6, column=1)
 
         # wof and tune input
-        self.general_wof = Boolean()
+        self.general_wof = BooleanVar()
         self.general_wof_label = Label(self.start_frame, font="Arial 15",
                                        text="General WOF and tune service required?")
         self.general_wof_label.grid(row=7)
