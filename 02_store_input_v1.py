@@ -115,6 +115,12 @@ class JobEnter:
             #add input to job list
             self.all_jobs_list.append([job_number, customer_name, distance_travelled, virus_protection, wof_tune])
 
+            # clear user input
+            self.customer_name.set("")
+            self.distance_travel_entry.delete(0, END)
+            self.virus_protection_entry.delete(0, END)
+            self.general_wof.set(False)
+            
             # change job number after entered
             job_number += 1
             self.job_number.set(job_number)
