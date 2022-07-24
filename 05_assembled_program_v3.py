@@ -127,7 +127,7 @@ class JobEnter:
                     raise ValueError
             except ValueError:
                 # display error message
-                self.error_check_label.config(text="Customer name should not include any numbers or special characters.", wrap=275,
+                self.error_check_label.config(text="Customer name should not include any numbers or special characters.", wrap=200,
                                               font="Arial 15 bold", bg="#faa0b6")
                 self.error_check_label.grid(row=8, column=1)
             else:
