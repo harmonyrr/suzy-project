@@ -233,3 +233,13 @@ class AllJobs:
             self.job_number.set(self.all_jobs_list[self.job][0])
             self.customer_name.set(self.all_jobs_list[self.job][1])
             self.job_amount.set(self.all_jobs_list[self.job][5])
+            
+            
+
+# main routine
+if __name__ == "__main__":
+    root = Tk()
+    root.title("Suzy's Mobile Service")
+    something = JobEnter()
+    root.mainloop()
+
