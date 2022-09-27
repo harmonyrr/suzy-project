@@ -1,3 +1,10 @@
+'''
+Suzy Mobile Service
+Harmony Rigg
+24 July, 2022
+V3 Assembled Program
+'''
+
 from tkinter import *
 from tkinter import ttk
 import math
@@ -7,6 +14,10 @@ import string
 
 class JobEnter:
     def __init__(self):
+        """
+        Get input from user.
+        return --> float / string / boolean
+        """
 
         # gui for main menu/new job enter
         # start frame
@@ -112,6 +123,10 @@ class JobEnter:
         root.destroy()
 
     def store_input(self):
+        """
+        Checks the input is correct and stores the input in a list
+        return --> float / string / boolean
+        """
         # check nothing is blank
         if self.customer_name.get == "" or self.distance_travel.get() == "" or self.virus_protection.get() == "":
             self.error_check_label.config(text="Do not leave any entries blank.", font="Arial 15 bold", bg="#faa0b6")
@@ -167,6 +182,10 @@ class JobEnter:
 
 
     def job_charge_calc(self):
+        """
+        Calculates the cost of the entered job
+        return --> float / string / boolean
+        """
         distance_travel = self.distance_travel.get()
         decimal_point = 0
         multiplier = 10 ** decimal_point
@@ -207,12 +226,21 @@ class JobEnter:
         print(self.all_jobs_list)
 
     def view_all_jobs(self, all_jobs_list):
+        """
+        Begins the 'AllJobs' class
+        arguments: all_jobs_list
+        """
         AllJobs(self, all_jobs_list)
 
 
 
 class AllJobs:
     def __init__(self, partner, all_jobs_list):
+        """
+        Allows the user to view all the jobs that have been entered during the session
+        arguments: partner,  all_jobs_list:
+        return --> float / string / boolean
+        """
         self.all_jobs_box = Toplevel()
 
         # gui frame
@@ -275,12 +303,20 @@ class AllJobs:
         self.close_button.grid(row=1, column=0, padx=10, pady=10)
 
     def close_all_jobs(self, partner):
+        """
+        Closes the 'view all jobs' window
+        arguments: partner
+        """
         partner.view_all_button.config(state=NORMAL)
         # close all jobs window
         self.all_jobs_box.destroy()
 
 
     def display_input(self, scroll):
+        """
+        Shows the user's input on the window
+        arguments: scroll
+        """
         # change displayed job info
         if scroll == "next":
             self.job += 1
