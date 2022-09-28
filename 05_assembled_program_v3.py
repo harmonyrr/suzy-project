@@ -15,7 +15,7 @@ import string
 class JobEnter:
     def __init__(self):
         """
-        Get input from user.
+        receive and store input from the user
         return --> float / string / boolean
         """
 
